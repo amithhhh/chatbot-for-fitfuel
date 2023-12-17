@@ -1,10 +1,23 @@
 # FitFuel Chatbot
 
-![FitFuel Chatbot](path/to/your/image.png)
+![FitFuel Chatbot](https://github.com/amith7025/chatbot-for-fitfuel/blob/main/chatbot.png)
 
 ## Overview
 
 The FitFuel Chatbot is a project designed to provide answers to a wide range of medical questions, supporting the FitFuel initiative. With responses spanning over 1940 medical topics, this chatbot serves as a valuable resource for health-related inquiries.
+
+## Transformer Architecture
+
+Built on the revolutionary Transformer architecture, the FitFuel Chatbot represents the forefront of natural language processing. The Transformer architecture, introduced by Vaswani et al. in the paper [Attention Is All You Need](https://arxiv.org/abs/1706.03762), has become the backbone of modern language models. Its key features include:
+
+- **Attention Mechanism:** Allowing the model to focus on different parts of the input sequence, capturing long-range dependencies effectively.
+
+- **Multi-Head Attention:** Enabling the model to attend to different positions with different learned linear projections, providing enhanced representational power.
+
+- **Positional Encoding:** Incorporating the position of words in the input sequence, addressing the lack of sequential information in the original Transformer model.
+
+- **Feedforward Neural Networks:** Processing the information from the attention mechanism, facilitating the learning of complex relationships.
+
 
 ## Repository Structure
 
@@ -24,32 +37,27 @@ Follow these steps to get the FitFuel Chatbot up and running on your local machi
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/your-username/fitfuel-chatbot.git
-    cd fitfuel-chatbot
+    git clone https://github.com/your-username/chatbot-for-fitfuel.git
+    cd chatbot-for-fitfuel
     ```
-
-2. **Navigate to Code:**
-    ```bash
-    cd code
-    ```
-
-3. **Install Dependencies:**
+2. **Install Dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
+3. **Navigate to Code:**
+    ```bash
+    cd code
+    ```
+
 4. **Run the Chatbot:**
     ```bash
-    python chatbot.py
+    python translate.py
     ```
 
 ## Contributing
 
 We welcome contributions to enhance the capabilities of the FitFuel Chatbot. If you have suggestions, bug reports, or want to add more questions, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE.md) - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
