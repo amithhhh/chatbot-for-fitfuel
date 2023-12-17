@@ -37,7 +37,7 @@ Follow these steps to get the FitFuel Chatbot up and running on your local machi
 
 1. **Clone the Repository:**
     ```bash
-    git clone https://github.com/your-username/chatbot-for-fitfuel.git
+    git clone https://github.com/amith7025/chatbot-for-fitfuel.git
     cd chatbot-for-fitfuel
     ```
 2. **Install Dependencies:**
