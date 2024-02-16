@@ -15,13 +15,13 @@ max_sequence_length = 460
 ffn_hidden = 2048
 num_heads = 8
 drop_prob = 0.1
-num_layers = 1
+num_layers = 2
 vocab_size = len(tokens)
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 transformer = Transformer(d_model,ffn_hidden,num_heads,drop_prob,num_layers,max_sequence_length,vocab_size,lang_to_index,lang_to_index,START_TOKEN,END_TOKEN,PADDING_TOKEN)
 
-transformer.load_state_dict(torch.load('prototype_600.pth',map_location=torch.device('cpu')))
+transformer.load_state_dict(torch.load('sprototype_org10.pth',map_location=torch.device('cpu')))
 
 NEG_INFTY = -1e9
 
@@ -57,7 +57,8 @@ def translate(text):
   a = ("",)
   for word_counter in range(max_sequence_length):
     encoder_self_attention_mask, decoder_self_attention_mask, decoder_cross_attention_mask= create_masks(q, a)
-    predictions = transformer(q,
+    with torch.inference_mode():
+            predictions = transformer(q,
                               a,
                               encoder_self_attention_mask.to(device),
                               decoder_self_attention_mask.to(device),
